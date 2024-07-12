@@ -1,0 +1,43 @@
+<p>data-binding works!</p>
+<div class="row">
+    <div class="col-4">
+       One way data binding
+    </div>
+    <div class="col-4">
+To
+    </div>
+    <div class="col-4">
+You
+    </div>
+</div>
+<div class="row">
+    <div class="col-6">
+        <div class="row">
+            <div class="col-4">
+               <h4> {{courseName}}</h4>
+
+            </div>
+            <input type="text" value="{{courseName}}" placeholder="Enter Course ">
+        </div>
+       One way data binding
+       <input type="text" [value]="courseName" placeholder="Enter Course ">
+       <button class="btn btn-success" (click)="showAlert('Welcome to the Event Data binding')">Show Welcome</button>
+       <button class="btn btn-success" (click)="changeCourseName()">Change Name</button>
+       <button class="btn btn-success" (click)="prevCourseName()">Previous Name</button>
+    </div>
+    <div class="col-6">
+
+        <input type="text" [(ngModel)]="courseName" name="" id=""/>{{courseName}}
+        <select [(ngModel)]="cityName">
+            <option value="">Select</option>
+            <option value="LHR">LHR</option>
+            <option value="FSD">FSD</option>
+            <option value="ISB">ISB</option>
+        </select>
+
+    </div>
+    <div class="col-6">
+        <h2>{{firstName()}}</h2>
+        <button class="btn btn-success" (click)="changeCourseName()">Change Name</button>
+    </div>
+</div>

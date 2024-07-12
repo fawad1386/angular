@@ -1,0 +1,52 @@
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.center{
+    text-align: center;
+}
+
+.app-title{
+    font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  color: rgb(104, 74, 38);
+}
+
+.add-btn {
+    background-color:cornflowerblue;
+    height: 30px;
+    width: 80px;
+    margin: 10px 10px;
+    border-color: burlywood;
+    border-width: 3px;
+}
+
+.input-text{
+    border-color: burlywood;
+    border-width: 3px;
+
+}
+
+.delete{
+    background-color:crimson;
+    height: 30px;
+    width: 80px;
+    margin: 10px 10px;
+    border-color: burlywood;
+    border-width: 3px;
+}
+
+.list ul li{
+    list-style:none;
+}
+
+.list{
+    margin: 10px 10px;
+}
+

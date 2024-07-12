@@ -1,0 +1,66 @@
+<p>directives works!</p>
+<div class="bg-secondary p-3 text-center">Structural Directives</div>
+<div class="btn btn-primary" routerLink="data-binding">Goto Data Binding</div>
+<div class="btn btn-success" (click)="navigateToDataBinding()">Goto Data Binding</div>
+<div class="row pt-3">
+    <div class="col-3">
+      <div *ngIf="isDiv1Visible" class="text-center bg-danger p-3 ">
+        Div-1
+      </div>
+    </div>
+    <div class="col-3">
+      <div *ngIf="isDiv2Visible" class="text-center bg-success p-3 ">
+        Div-2
+      </div>
+    </div>
+    <div class="col-3">
+      <div *ngIf="num1==num2" class="text-center bg-secondary p-3 ">
+        Div-3
+      </div>
+    </div>
+    <div class="col-3">
+      <div *ngIf="selectedCity=='LHR'" class="text-center bg-primary p-3 ">
+        Div-4
+      </div>
+    </div>
+</div>
+
+<div class="row pt-3">
+    <div class="col-3 text-center">
+        <button class="btn btn-danger" (click)="hideDiv1()">Hide</button>
+        <button class="btn btn-primary mx-2" (click)="showDiv1()">Show</button>
+    </div>
+    <div class="col-3 text-center">
+        <button class="btn btn-success" (click)="toggleDiv2()">Toggle</button>
+    </div>
+    <div class="col-3 text-center">
+        <div style="display: flex; align-items: center; justify-content: center;">
+            <input  type="text" [(ngModel)]="num1" placeholder="Num-1" class="width-50">
+            <input  type="text" [(ngModel)]="num2" placeholder="Num-2" class="width-50">
+
+        </div>
+    </div>
+    <div class="col-3 text-center">
+        <div style="display: flex; align-items: center; justify-content: center;">
+            <input type="checkbox" [(ngModel)]="isActive"  class="width-50">
+            <select [(ngModel)]="selectedCity" >
+                <option value="">Select</option>
+                <option value="LHR">LHR</option>
+                <option value="FSD">FSD</option>
+                <option value="ISB">ISB</option>
+            </select>
+
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-3">
+        <ul>
+            <li *ngFor="let city of cityArray">
+                {{city}} 
+            </li>
+        </ul>
+    </div>
+</div>
